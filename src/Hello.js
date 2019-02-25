@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import RichTextEditor, { stateToHTML } from "react-rte";
 // import ReactHtmlParser from 'react-html-parser';
 // import { stateToHTML } from "draft-js-export-html";
+import Hello from './Hello.css'
 
 class MyStatefulEditor extends Component {
   state = {
@@ -29,10 +30,10 @@ class MyStatefulEditor extends Component {
     console.log("this.props:", this.props)
     // let html = stateToHTML(this.state.value);
     return (
-      <div>
+      <div className="rte">
         <RichTextEditor value={this.state.value} onChange={this.onChange} />
         {/*{this.state.value.toString("html")}*/}
-        <br />
+        {/*<br />
         <br />
         {/*<h3>Preview:</h3>*/}
         {/*{ReactHtmlParser(this.state.value.toString("html"))*/}
